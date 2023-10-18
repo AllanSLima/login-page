@@ -6,13 +6,18 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+body * {
+    box-sizing: border-box;
+}
+
 .main-login{
     width: 100vw;
-    height: 100vh;
+    height: 75vh;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .left-login{
@@ -24,8 +29,14 @@ body{
     flex-direction: column;
 }
 
+.left-login-image{
+    width: auto;
+    
+}
+
 .left-login > h1{
-    color: white;
+    font-size: 3vw;
+    color: #145289;
 }
 
 .right-login{
@@ -101,3 +112,36 @@ body{
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #00ff8052;
 }
+
+@media only screen and (max-width: 950px){
+    .card-login{
+        width: 85%;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .left-login > h1{
+        font-size: 5px;
+    }
+    .left-login-image{
+        display: none;
+    }
+    .card-login{
+        width: auto;
+        height: auto;
+    }
+
+    .left-login{
+        width: auto;
+        height: auto;
+    }
+    .right-login{
+        width: auto;
+        height: auto;
+    }
+}
+
+
+
+
