@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'Tahoma';
+    src: url('tahoma-regular.ttf') format('truetype'); /* Tahoma Regular */
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Tahoma';
+    src: url('tahoma-bold.ttf') format('truetype'); /* Tahoma Bold */
+    font-weight: bold;
+}
+
+body{
+    margin: 0;
+    font-family: 'Tahoma', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main-login{
+    width: 100vw;
+    height: 100vh;
+    background: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-login > p{
+    color: grey;
+    font-family: 'Tahoma', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.471;
+
+
+}
+
+.left-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login-image{
+    width: 50%;
+    margin: 20px;
+    
+}
+
+.left-login > h1{
+    font-family: 'Tahoma', sans-serif;
+    font-weight: bold;
+    font-size: 3vw;
+    color: #145289;
+}
+
+.right-login{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #002d62;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.card-login > h1{
+    color: white;
+    font-size: 15px;
+    font-family: 'Tahoma', sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.textfield{
+    font-family: 'Tahoma', sans-serif;
+    font-style: italic;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #95a9cc;
+    color: #f0ffffde;
+    font-size: 12pt;
+    font-family: 'Tahoma', sans-serif;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label {
+    font-family: 'Tahoma', sans-serif;
+    font-weight: 400;
+    color: #f0ffffde;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder{
+    font-family: 'Tahoma', sans-serif;
+    color: #f0ffff94;
+
+}
+
+.btn-login{
+    font-family: 'Tahoma', sans-serif;
+    width: 50%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    
+    letter-spacing: 2px;
+    color: white;
+    background: #4180ab;
+    cursor: pointer;
+    box-shadow: 0px 5px 30px -12px black;
+}
+
+.error {
+    font-family: 'Tahoma', sans-serif;
+    color: #FF0000; /* Cor vermelha para mensagens de erro */
+    font-size: 12pt;
+    margin-top: 5px; /* Adicione espaço entre o campo de senha e a mensagem de erro */
+}
+
+
+
+@media only screen and (max-width: 950px){
+    .right-login{
+        width: 70%;
+    }
+
+    .card-login{
+        width: 85%;
+    }
+
+    .left-login-image{
+        width: 100%;
+        margin: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    .left-login > p{
+        font-size: 5vw;
+    }
+    
+    .left-login-image{
+        width: 50%;
+        margin: 20px;
+    }
+
+    .card-login{
+        width: auto;
+        height: auto;
+    }
+
+    .left-login{
+        width: auto;
+        height: auto;
+    }
+    .right-login{
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+
