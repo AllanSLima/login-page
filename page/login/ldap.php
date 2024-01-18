@@ -1,16 +1,16 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $server = "10.2.30.1"; // Endereço do servidor LDAP
+    $server = "192.168.10.1"; // Endereço do servidor LDAP
     $user = $_POST['user']; // Obtém o nome de usuário do formulário
     $pass = $_POST['senha']; // Obtém a senha do formulário
 
     if (!empty($user) && !empty($pass)) {
-        // Verifica se o domínio não está presente e adiciona o sufixo 'cohabsp\' se necessário
-        if (strpos($user, '@cohabsp.sp.gov.br') === false) {
-            $user = 'cohabsp\\' . $user;
+        // Verifica se o domínio não está presente e adiciona o sufixo 'dominio\' se necessário
+        if (strpos($user, '@dominio.com.br') === false) {
+            $user = 'dominio\\' . $user;
         } else {
-            // Remove o sufixo 'cohabsp\' se o domínio estiver presente
-            $user = str_replace('cohabsp\\', '', $user);
+            // Remove o sufixo 'dominio\' se o domínio estiver presente
+            $user = str_replace('dominio\\', '', $user);
         }
     }
 
@@ -26,15 +26,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: index.php?error_message=" . urlencode($error_message));
             exit();
         } else {
-            // Remove o sufixo 'cohabsp\' se estiver presente
-            $user = str_replace('cohabsp\\', '', $user);
+            // Remove o sufixo 'dominio\' se estiver presente
+            $user = str_replace('dominio\\', '', $user);
 
-            // Remove o domínio '@cohabsp.sp.gov.br' se estiver presente
+            // Remove o domínio '@dominio.com.br' se estiver presente
             $user = strstr($user, '@', true) ?: $user;
             $samaccountname = $user;
 
-            $original_dn = "OU=Departamentos,DC=cohabsp,DC=sp,DC=gov,DC=br";
-            $filter = "(memberOf=cn=own_zammadadm,ou=_usermanagedgroups,dc=cohabsp,dc=sp,dc=gov,dc=br)";
+            $original_dn = "filtro";
+            $filter = "(filtro)";
             $justthese = array("memberOf");
 
             $res = ldap_search($connect, $original_dn, "(samaccountname=$samaccountname)");
