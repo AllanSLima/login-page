@@ -13,7 +13,7 @@
 
             <div class="main-login">
             <div class="left-login">
-                <img src="logoCOHAB.jpg" class="left-login-image" alt="logoCOHAB">
+                <img src="windows.png" class="left-login-image" alt="logoWindows">
             </div>
             <div class="right-login">
             <div class="card-login">
