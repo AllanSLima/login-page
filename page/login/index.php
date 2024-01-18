@@ -45,9 +45,9 @@
                 </div>
                 </div>
                 <p> 
-                ©2023 COHAB-SP - Todos os direitos reservados.
+                ©2023 Dominio-SP - Todos os direitos reservados.
                 <br>
-                Companhia Metropolitana de Habitação de São Paulo.
+                Companhia Dominio-SP.
                 </p>
     
                 </div>
